@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block pagecontent %}
+<section class="home">
+    <div class="home__textbox">
+        <h2 class="home__textbox--title">
+            You are not alone, we are here to help
+        </h2>
+        <p class="home__textbox--description">
+            Your journey to recovery starts here, take the first step towards happiness with us by telling us what you are going through and we will help you to get in touch with help and mentorship and therapy sessions.
+        </p>
+        <div class="home__textbox--cta">
+            <a href="" class="btn btn--home">talk to us</a>
+        </div>
+    </div>
+    <div class="home__textbox--image">
+        <!-- <img src="{{ url_for('static', filename='images/blob.png')}}" alt="two people hugging"> -->
+        <img src="{{ url_for('static', filename='images/hugging2.jpg')}}" alt="two people hugging">
+    </div>
+</section>
+
+<!-- what we help you with section -->
+<section class="wwhyw-section">
+    <div class="title-box">
+        <h3 class="title-box__titlesub">what we help you with (and more)</h3>
+        <h2 class="title-box__titlemain">Your first step to happiness is when you say the issues that press you</h2>
+    </div>
+
+    <div class="boxes-container">
+        <div class="what-box">
+            <div class="what-box__image">
+                <img src="{{ url_for('static', filename='images/ww1.svg')}}" alt="depression" class="what-box__image--img">
+            </div>
+            <h4 class="what-box__title">depression</h4>
+            <p class="what-box__description">
+                Depression is a serious mental health condition that can affect anyone, causing feelings of sadness, hopelessness, and despair. It can also lead to changes in appetite, sleep patterns, and energy levels, making it difficult to carry out daily activities. 
+            </p>
+            <a href="" class="what-box__cta btn">talk to us</a>
+        </div>
+
+        <div class="what-box">
+            <div class="what-box__image">
+                <img src="{{ url_for('static', filename='images/ww1.svg')}}" alt="depression" class="what-box__image--img">
+            </div>
+            <h4 class="what-box__title">depression</h4>
+            <p class="what-box__description">
+                Depression is a serious mental health condition that can affect anyone, causing feelings of sadness, hopelessness, and despair. It can also lead to changes in appetite, sleep patterns, and energy levels, making it difficult to carry out daily activities. 
+            </p>
+            <a href="" class="what-box__cta btn">talk to us</a>
+        </div>
+
+        <div class="what-box">
+            <div class="what-box__image">
+                <img src="{{ url_for('static', filename='images/ww1.svg')}}" alt="depression" class="what-box__image--img">
+            </div>
+            <h4 class="what-box__title">depression</h4>
+            <p class="what-box__description">
+                Depression is a serious mental health condition that can affect anyone, causing feelings of sadness, hopelessness, and despair. It can also lead to changes in appetite, sleep patterns, and energy levels, making it difficult to carry out daily activities. 
+            </p>
+            <a href="" class="what-box__cta btn">talk to us</a>
+        </div>
+
+        <div class="what-box">
+            <div class="what-box__image">
+                <img src="{{ url_for('static', filename='images/ww1.svg')}}" alt="depression" class="what-box__image--img">
+            </div>
+            <h4 class="what-box__title">depression</h4>
+            <p class="what-box__description">
+                Depression is a serious mental health condition that can affect anyone, causing feelings of sadness, hopelessness, and despair. It can also lead to changes in appetite, sleep patterns, and energy levels, making it difficult to carry out daily activities. 
+            </p>
+            <a href="" class="what-box__cta btn">talk to us</a>
+        </div>
+
+        <div class="what-box">
+            <div class="what-box__image">
+                <img src="{{ url_for('static', filename='images/ww1.svg')}}" alt="depression" class="what-box__image--img">
+            </div>
+            <h4 class="what-box__title">depression</h4>
+            <p class="what-box__description">
+                Depression is a serious mental health condition that can affect anyone, causing feelings of sadness, hopelessness, and despair. It can also lead to changes in appetite, sleep patterns, and energy levels, making it difficult to carry out daily activities. 
+            </p>
+            <a href="" class="what-box__cta btn">talk to us</a>
+        </div>
+
+        <div class="what-box">
+            <div class="what-box__image">
+                <img src="{{ url_for('static', filename='images/ww1.svg')}}" alt="depression" class="what-box__image--img">
+            </div>
+            <h4 class="what-box__title">depression</h4>
+            <p class="what-box__description">
+                Depression is a serious mental health condition that can affect anyone, causing feelings of sadness, hopelessness, and despair. It can also lead to changes in appetite, sleep patterns, and energy levels, making it difficult to carry out daily activities. 
+            </p>
+            <a href="" class="what-box__cta btn">talk to us</a>
+        </div>
+    </div>
+</section>
+<!-- end of what we help you with section -->
+
+<!-- volunteers section -->
+<section class="volunteer-section">
+    <div class="title-box">
+        <h3 class="title-box__titlesub">are you willing to help??</h3>
+        <h2 class="title-box__titlemain">The greatest gift is a portion of thyself. A helping hand is worth more than a thousand words.</h2>
+    </div>
+
+    <div class="volunteer-section__textbox">
+        <figure>
+            <img class="volunteer-section__textbox--img" src="{{ url_for('static', filename='images/help.svg')}}" alt="helping a person">
+            <figcaption>"No act of kindness, no matter how small, is ever wasted."</figcaption>
+        </figure>
+        <p class="volunteer-section__textbox--text">
+            We are really humbled to see that you are willing to help others in their difficult situations by providing whatever kind of help you are willing to, remember, <span>"We rise by lifting others"</span>  and you are in the first steps to changing someone's life for the better.
+        </p>
+        <p class="volunteer-section__textbox--text">
+            To get started, simply click the get started link below and fill in the details in the form that appears, once you are done submit the form and we will getting back to you shortly.
+        </p>
+        <a href="" class="btn volunteer-section__textbox--btn">get started helping others</a>
+    </div>
+</section>
+<!-- end of volunteers section -->
+{% endblock pagecontent %}

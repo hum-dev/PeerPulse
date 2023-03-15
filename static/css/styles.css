@@ -1,0 +1,303 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+:root{
+    --open-sans-font: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    --oswald-font: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+    --color-primary: #09cc7f;
+    --color-primary-dark: #28a745;
+    --color-secondary: #1c165c;
+    --color-secondary-light: #8D99AE;
+    --color-snow-white: #FBF5F3;
+    --color-ivory-white: #F6F7EB;
+    --color-anti-flash-white: #EDF2EF;
+    --color-heavy-white: #EDF2F4;
+    --color-black-night: #0F110C;
+    --color-black-main: #222;
+    --color-black-light: #333;
+}
+
+body{
+    font-size: 1.4rem;
+    font-family: var(--open-sans-font);
+    color: var(--color-black-main);
+    position: relative;
+}
+
+/* utilities styings */
+.success, .danger, .flash_guidance{
+    width: max-content;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 100px;
+    font-weight: bold;
+}
+
+.success{
+    background-color: lightgreen;
+    color: var(--color-ivory-white);
+}
+
+.flash_guidance{
+    background-color: orange;
+    color: var(--color-ivory-white);
+}
+
+.danger{
+    background-color: red;
+    color: var(--color-ivory-white);
+}
+
+.form-error{
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.btn{
+    padding: 2rem 3rem;
+    text-decoration: none;
+    background-color: var(--color-primary-dark);
+    color: var(--color-anti-flash-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.title-box{
+    width: 60%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.title-box__titlesub{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary-dark);
+}
+
+.title-box__titlemain{
+    font-size: 4rem;
+    color: var(--color-secondary);
+    text-transform: capitalize;
+    text-align: center;
+}
+/* End of utilities stylings */
+
+/* header stylings */
+.logo{
+    font-family: var(--oswald-font);
+    font-size: 5rem;
+}
+
+.logo span{
+    color: var(--color-primary-dark);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px #ccc;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100000000000000;
+}
+
+.header__nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-list--item a{
+    display: inline-block;
+    padding: 2rem 2.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--color-primary-dark);
+}
+
+.header__cta{
+    padding: 2rem 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--color-primary-dark);
+    color: var(--color-anti-flash-white);
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+/* end of header stylings */
+
+/* The home section stylings */
+.home{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 5rem;
+}
+
+.home__textbox{
+    width: 60%;
+    margin-right: 2rem;
+}
+
+.home__textbox--title{
+    font-size: 5rem;
+    text-transform: capitalize;
+    color: var(--color-secondary);
+}
+
+.home__textbox--description{
+    margin: 4rem 0;
+    font-size: 1.8rem;
+    text-align: justify;
+    line-height: 1.7;
+    color: var(--color-black-light);
+    font-weight: 500;
+}
+/* End of the home section stylings */
+
+/* what we help with section */
+.boxes-container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    justify-items: center;
+}
+
+.what-box{
+    --size: 40rem;
+    width: var(--size);
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px #333;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.what-box::after{
+    content: "";
+    width: 100%;
+    height: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s ease;
+}
+
+.what-box >*{
+    transition: all .5s ease;
+}
+
+.what-box:hover::after{
+    height: 100%;
+}
+
+.what-box:hover>*{
+    color: var(--color-heavy-white);
+}
+
+.what-box__image img{
+    --size: 25rem;
+    width: var(--size);
+    height: var(--size);
+}
+
+.what-box__title{
+    font-size: 3rem;
+    margin: 1rem 0;
+    text-transform: capitalize;
+    color: var(--color-secondary);
+    /* font-family: var(--oswald-font); */
+    font-weight: 700;
+}
+
+.what-box__description{
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--color-black-light);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.what-box__cta{
+    display: block;
+    width: 90%;
+    text-align: center;
+}
+/* end of what we help with section stylings */
+
+/* volunteer section stylings */
+.volunteer-section{
+    margin-top: 4rem;
+}
+
+.volunteer-section__textbox{
+    width: 80%;
+    margin: 3rem auto;
+}
+
+figure{
+    margin: 5rem 0;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: oblique;
+    color: var(--color-secondary);
+    font-weight: 800;
+}
+
+.volunteer-section__textbox--img{
+    --size: 40rem;
+    display: block;
+    width: var(--size);
+    margin: 3rem auto;
+}
+
+.volunteer-section__textbox--text{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.8;
+    color: var(--color-black-light);
+    font-weight: 600;
+}
+
+.volunteer-section__textbox--btn{
+    display: block;
+    width: max-content;
+    margin: 3rem auto;
+}
+/* end of volunteer section stylings */
