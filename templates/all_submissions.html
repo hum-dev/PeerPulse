@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block pagecontent %}
+
+<section class="all-submissions-section">
+    <div class="submissions_container">
+        {% for issue in all_issues %}
+        <div class="submission-box">
+            <div class="submission-box__header">
+                <div class="submission-avartar">{{ issue.first_name[0]}}{{issue.last_name[0]}}</div>
+                <div class="submission__user">
+                    <h4 class="submission__user--name">{{issue.first_name}} {{issue.last_name}} <span>({{issue.age}} years old)</span></h4>
+                    <div class="submission__user--contacts">
+                        <p class="submission__user--contact-box sub-u-border-right">
+                            <svg>
+                                <use xlink:href="static/images/sprite.svg#icon-gmail"></use>
+                            </svg>
+                            <span> {{issue.email_address}} </span>
+                        </p>
+                        <p class="submission__user--contact-box">
+                            <svg>
+                                <use xlink:href="static/images/sprite.svg#icon-phone"></use>
+                            </svg>
+                            {{ issue.phone_number }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="submission__text">
+                {{ issue.issue_textual }}
+            </p>
+            {{issue.random_user_id}}
+            <div class="submission__footer">
+                <p class="submission__date">Posted on <span>{{issue.date_posted}}</span></p>
+                <a href="" class="submission__action">Mark as handled/Being handled</a>
+                <a href="" class="submission__action submission__action--danger">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock pagecontent%}

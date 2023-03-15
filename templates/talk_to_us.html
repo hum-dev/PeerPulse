@@ -19,36 +19,72 @@
             </p>
         </div>
         <div class="talk-section__container--form">
-            <form action="" class="talk_to_us_form">
+            <form method="POST" class="talk_to_us_form">
                 {{form.hidden_tag()}}
                 <div class="talk-form_group">
                     {{form.first_name.label(class="talk-form_group--label")}}
                     {{ form.first_name(class="talk-form_group--input", placeholder="first name") }}
+
+                    {% if form.first_name.errors %}
+                        {% for error in form.first_name.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
         
                 <div class="talk-form_group">
                     {{form.last_name.label(class="talk-form_group--label", placeholder="last name")}}
                     {{ form.last_name(class="talk-form_group--input", placeholder="last name") }}
+
+                    {% if form.last_name.errors %}
+                        {% for error in form.last_name.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
         
                 <div class="talk-form_group">
                     {{form.phone_number.label(class="talk-form_group--label", placeholder="phone number")}}
                     {{ form.phone_number(class="talk-form_group--input", placeholder="phone number") }}
+
+                    {% if form.phone_number.errors %}
+                        {% for error in form.phone_number.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
         
                 <div class="talk-form_group">
                     {{form.email_address.label(class="talk-form_group--label", placeholder="email address")}}
                     {{ form.email_address(class="talk-form_group--input", placeholder="email address") }}
+
+                    {% if form.email_address.errors %}
+                        {% for error in form.email_address.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
                 </div>
         
                 <div class="talk-form_group">
                     {{form.age.label(class="talk-form_group--label", placeholder="age")}}
                     {{ form.age(class="talk-form_group--input", placeholder="age") }}
+
+                    {% if form.age.errors %}
+                        {% for error in form.age.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}                 
                 </div>
         
                 <div class="talk-form_group">
                     {{form.issue_textual.label(class="talk-form_group--label", placeholder="talk")}}
                     {{ form.issue_textual(class="form-text-area") }}
+
+                    {% if form.issue_textual.errors %}
+                        {% for error in form.issue_textual.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}   
                 </div>
                 {{ form.submit(class="form-submit")}}
             </form>

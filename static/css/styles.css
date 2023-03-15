@@ -503,3 +503,109 @@ figcaption{
     color: var(--color-secondary);
 }
 /* end of talk to us section */
+
+/* submissions section stylings */
+.submission-box{
+    width: 60%;
+    margin: 3rem auto;
+    padding: 1rem;
+    box-shadow: 0 0 3px #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.submission-box__header{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.submission-avartar{
+    --size: 10rem;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--color-primary-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--color-heavy-white);
+    margin-right: 3rem;
+    text-transform: uppercase;
+}
+
+.submission__user--name{
+    font-size: 3rem;
+    color: var(--color-primary-dark);
+    text-transform: capitalize;
+}
+
+.submission__user--name span{
+    font-size: 2rem;
+    color: var(--color-secondary);
+}
+
+.submission__user--contacts{
+    display: flex;
+    align-items: center;
+    margin-top: .5rem;
+}
+
+.sub-u-border-right{
+    border-right: 2px solid #ccc;
+}
+
+.submission__user--contact-box{
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.submission__user--contact-box svg{
+    --size: 3rem;
+    width: var(--size);
+    height: var(--size);
+    fill: var(--color-black-light);
+    margin-right: 1rem;
+}
+
+.submission__text{
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.submission__footer{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.submission__date{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primary-dark);
+    margin-right: 2rem;
+}
+
+.submission__date span{
+    color: var(--color-secondary);
+}
+
+.submission__action{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: var(--color-primary-dark);
+    color: var(--color-snow-white);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+
+.submission__action--danger{
+    background-color: crimson;
+    margin-left: 2rem;
+}
+/* End of submissions section stylings */
