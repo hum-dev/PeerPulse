@@ -1,4 +1,58 @@
 {% extends 'base.html' %}
 {% block pagecontent %}
-<h1>talk to us</h1>
+<section class="talk-to-us-section">
+    <h2 class="page-section-title">talk to us, let us take action</h2>
+    <div class="talk-section__container">
+        <div class="talk-section__container--guide">
+            <h2>Quick guide</h2>
+            <p class="guide-text">
+                If you are not comfortable sharing your full details, you can give us a made up/fake <strong><em>first name</em></strong> and <strong><em>last name</em></strong>, remember, this is in case you are not comfortable being known fully before your help sessions.
+            </p>
+            <p class="guide-text">
+                <strong><em>[IMPORTANT]</em></strong> &mdash; Make sure your phone number and email address are correct as this is the only way we will get in touch with you once we receive your submission, if you provide incorrect details here, we won't have a way of getting to you.
+            </p>
+            <p class="guide-text">
+                Provide us with your correct age, this is important as it helps us to know who we are matching you to for your sessions or how someone else will be giving help to you.
+            </p>
+            <p class="guide-text">
+                Describe what you are going through or what kind of help you wish or anything in the text box provided in not less than <strong><em>30 words</em></strong>.
+            </p>
+        </div>
+        <div class="talk-section__container--form">
+            <form action="" class="talk_to_us_form">
+                {{form.hidden_tag()}}
+                <div class="talk-form_group">
+                    {{form.first_name.label(class="talk-form_group--label")}}
+                    {{ form.first_name(class="talk-form_group--input", placeholder="first name") }}
+                </div>
+        
+                <div class="talk-form_group">
+                    {{form.last_name.label(class="talk-form_group--label", placeholder="last name")}}
+                    {{ form.last_name(class="talk-form_group--input", placeholder="last name") }}
+                </div>
+        
+                <div class="talk-form_group">
+                    {{form.phone_number.label(class="talk-form_group--label", placeholder="phone number")}}
+                    {{ form.phone_number(class="talk-form_group--input", placeholder="phone number") }}
+                </div>
+        
+                <div class="talk-form_group">
+                    {{form.email_address.label(class="talk-form_group--label", placeholder="email address")}}
+                    {{ form.email_address(class="talk-form_group--input", placeholder="email address") }}
+                </div>
+        
+                <div class="talk-form_group">
+                    {{form.age.label(class="talk-form_group--label", placeholder="age")}}
+                    {{ form.age(class="talk-form_group--input", placeholder="age") }}
+                </div>
+        
+                <div class="talk-form_group">
+                    {{form.issue_textual.label(class="talk-form_group--label", placeholder="talk")}}
+                    {{ form.issue_textual(class="form-text-area") }}
+                </div>
+                {{ form.submit(class="form-submit")}}
+            </form>
+        </div>
+    </div>
+</section>
 {% endblock pagecontent %}

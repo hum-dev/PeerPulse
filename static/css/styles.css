@@ -96,6 +96,55 @@ body{
     text-transform: capitalize;
     text-align: center;
 }
+
+.form-text-area{
+    padding: 2rem;
+    font-family: var(--open-sans-font);
+    font-weight: 600;
+    line-height: 1.6;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 2px #ccc;
+    border: 2px solid var(--color-primary-dark);
+    min-width: 90%;
+    min-height: 30rem;
+    font-size: 1.6rem;
+}
+
+.form-submit{
+    border: none;
+    outline: none;
+    padding: 2rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: var(--color-primary-dark);
+    border-radius: 5px;
+    color: var(--color-heavy-white);
+}
+
+.page-section-title{
+    text-transform: capitalize;
+    text-align: center;
+    margin: 2rem auto;
+    color: var(--color-secondary);
+    font-size: 3rem;
+}
+
+.success-submission-text{
+    font-size: 3rem;
+    margin: 4rem auto;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color-primary-dark);
+    width: 90%;
+}
+
+.form-submission__image{
+    --size: 50rem;
+    width: var(--size);
+    display: block;
+    margin: 4rem auto;
+}
 /* End of utilities stylings */
 
 /* header stylings */
@@ -389,3 +438,68 @@ figcaption{
     font-weight: bold;
 }
 /* end of footer stylings */
+
+/* talk to us section */
+
+.talk-to-us-section{
+    position: relative;
+}
+
+.talk-section__container{
+    display: flex;
+    padding: 2rem;
+    position: relative;
+}
+
+.talk-section__container--guide{
+    width: 30%;
+    margin-right: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.guide-text{
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    font-weight: 600;
+}
+
+.guide-text strong{
+    text-decoration: underline;
+    background-color: var(--color-primary);
+}
+
+.talk-section__container--form{
+    width: 65%;
+}
+
+.talk-form_group{
+    margin-bottom: 2rem;
+}
+
+.talk-form_group--label{
+    display: block;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+}
+
+.talk-form_group--input{
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-width: 60%;
+}
+
+.talk-form_group--input::placeholder{
+    font-weight: normal;
+    text-transform: capitalize;
+    font-style: italic;
+    color: var(--color-secondary);
+}
+/* end of talk to us section */
