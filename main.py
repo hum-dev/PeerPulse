@@ -59,7 +59,7 @@ def talk_to_us():
 
 @app.route('/all-submissions', methods=["GET", "POST"])
 def all_submissions():
-    all_issues = HelpSeeker.query.all()
+    all_issues = HelpSeeker.query.order_by(HelpSeeker.date_posted.desc()).all()
     return render_template('all_submissions.html', all_issues=all_issues), 200
 
 if __name__ == "__main__":
