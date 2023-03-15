@@ -117,4 +117,113 @@
     </div>
 </section>
 <!-- end of volunteers section -->
+
+<!-- upcoming events section -->
+<section class="upcoming-events">
+    <div class="title-box">
+        <h3 class="title-box__titlesub">upcoming events</h3>
+        <h2 class="title-box__titlemain">we have a number of events coming up in the near future</h2>
+    </div>
+
+    <div class="upcoming-events__container">
+        <div class="upcoming-event">
+            <div class="upcoming-event__image-container">
+                <img src="{{ url_for('static', filename='images/walk.jpg')}}" alt="event image">
+            </div>
+            <div class="upcoming-event__about">
+                <h4 class="upcoming-event__about--title">somesha comrade walk</h4>
+                <div class="upcoming-event__details">
+                    <div class="upcoming-event__detail">
+                        <svg class="upcoming-event__detail--icon">
+                            <use xlink:href="static/images/sprite.svg#icon-clock"></use>
+                        </svg>
+                        <p class="upcoming-event__detail--text">8:00am - 6:00pm</p>
+                    </div>
+                    <div class="upcoming-event__detail">
+                        <svg class="upcoming-event__detail--icon">
+                            <use xlink:href="static/images/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p class="upcoming-event__detail--text">5th June 2023</p>
+                    </div>
+                    <div class="upcoming-event__detail">
+                        <svg class="upcoming-event__detail--icon">
+                            <use xlink:href="static/images/sprite.svg#icon-target"></use>
+                        </svg>
+                        <p class="upcoming-event__detail--text">Kirinyaga County</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="upcoming-event">
+            <div class="upcoming-event__image-container">
+                <img src="{{ url_for('static', filename='images/depression.jpg')}}" alt="event image">
+            </div>
+            <div class="upcoming-event__about">
+                <h4 class="upcoming-event__about--title">managing depression talk</h4>
+                <div class="upcoming-event__details">
+                    <div class="upcoming-event__detail">
+                        <svg class="upcoming-event__detail--icon">
+                            <use xlink:href="static/images/sprite.svg#icon-clock"></use>
+                        </svg>
+                        <p class="upcoming-event__detail--text">8:00pm - 10:00pm</p>
+                    </div>
+                    <div class="upcoming-event__detail">
+                        <svg class="upcoming-event__detail--icon">
+                            <use xlink:href="static/images/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <p class="upcoming-event__detail--text">17th June 2022</p>
+                    </div>
+                    <div class="upcoming-event__detail">
+                        <svg class="upcoming-event__detail--icon">
+                            <use xlink:href="static/images/sprite.svg#icon-target"></use>
+                        </svg>
+                        <p class="upcoming-event__detail--text">Kirinyaga University Main Hall</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end of upcoming events section -->
+
+<!-- Footer of the site -->
+<footer class="footer">
+    <div class="footer__side footer_u-marg-right">
+        <div class="footer__content-box">
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-gmail"></use>
+            </svg>
+            <p class="footer__content-box--text">wanjiku@gmail.com</p>
+        </div>
+        <div class="footer__content-box">
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-phone"></use>
+            </svg>
+            <p class="footer__content-box--text">+2547123456</p>
+        </div>
+    </div>
+    <div class="footer__side">
+        <div class="footer__content-box">
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-gmail"></use>
+            </svg>
+            <p class="footer__content-box--text">otwomadennis365@gmail.com</p>
+        </div>
+        <div class="footer__content-box">
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-phone"></use>
+            </svg>
+            <p class="footer__content-box--text">+254718762377</p>
+        </div>
+        <div class="footer__content-box">
+            <svg>
+                <use xlink:href="static/images/sprite.svg#icon-linkedin"></use>
+            </svg>
+            <p class="footer__content-box--text">https://linkedin.com/in/otwoma</p>
+        </div>
+    </div>
+</footer>
+<!-- End of the footer of the site -->
 {% endblock pagecontent %}
