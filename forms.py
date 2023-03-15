@@ -4,7 +4,7 @@ Handles anything to do with forms in the application
 """
 
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, TextAreaField, SubmitField
+from wtforms import StringField, IntegerField, TextAreaField, SubmitField, PasswordField
 from wtforms.validators import Length, EqualTo, Email, DataRequired
 
 class SpeakOutForm(FlaskForm):
@@ -18,3 +18,22 @@ class SpeakOutForm(FlaskForm):
     age = IntegerField('Enter your age', validators=[DataRequired()])
     issue_textual = TextAreaField('Tell us about it(30 characters minimum)', validators=[DataRequired(), Length(min=30)])
     submit = SubmitField("Submit")
+
+
+class AdminSignUp(FlaskForm):
+    """
+    Responsible for signing the admin up
+    """
+    prefered_username = StringField('Enter the admin\'s username', validators=[DataRequired(), Length(min=3)])
+    email_address = StringField('Enter the admin\'s email address', validators=[DataRequired(), Email()])
+    password = PasswordField('Create a password for the admin', validators=[DataRequired(), Length(min=8)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), Length(min=8), EqualTo('password')])
+    submit = SubmitField('create admin')
+
+class LoginForm(FlaskForm):
+    """
+    This form is repsonsible for logging the user into the platform
+    """
+    email_address = StringField('Enter email address', validators=[DataRequired(), Email()])
+    password = PasswordField('Enter your password', validators=[DataRequired(), Length(min=8)])
+    submit = SubmitField('log in')

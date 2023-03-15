@@ -608,4 +608,34 @@ figcaption{
     background-color: crimson;
     margin-left: 2rem;
 }
+
+.login-section{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.login-form-group__label{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.login-form-group__input{
+    padding: 2rem 2.5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.login-form{
+    width: 40%;
+}
 /* End of submissions section stylings */
