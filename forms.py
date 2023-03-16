@@ -37,3 +37,13 @@ class LoginForm(FlaskForm):
     email_address = StringField('Enter email address', validators=[DataRequired(), Email()])
     password = PasswordField('Enter your password', validators=[DataRequired(), Length(min=8)])
     submit = SubmitField('log in')
+
+class HelpOthersForm(FlaskForm):
+    """
+    This form is responsible for registering helpers into the platform
+    """
+    email_address = StringField('Enter email address', validators=[DataRequired(), Email()])
+    first_name = StringField('Your first name', validators=[DataRequired(), Length(min=3, max=20)])
+    last_name = StringField('Your last name', validators=[DataRequired(), Length(min=2, max=20)])
+    what_they_will_do = TextAreaField('Tell us what you will be doing to help and how exactly you will be doing that(30 characters minimum)', validators=[DataRequired(), Length(min=30)])
+    submit = SubmitField("submit")

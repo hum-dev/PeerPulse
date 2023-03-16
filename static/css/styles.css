@@ -25,6 +25,7 @@ html{
     --color-black-night: #0F110C;
     --color-black-main: #222;
     --color-black-light: #333;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -645,11 +646,19 @@ figcaption{
     padding: 3rem 2rem;
 }
 
+.team-section__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    justify-items: center;
+    margin-top: 3rem;
+}
+
 .team__member{
     --size: 35rem;
     width: var(--size);
     box-shadow: 0 0 2px #444;
     padding: 1rem;
+    margin-bottom: 3rem;
 }
 
 .team__member__image-container{
@@ -689,3 +698,56 @@ figcaption{
     margin-right: 1.5rem;
 }
 /* end of the team members section stylings */
+
+/* volunteer section */
+.volunteer_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* end of the volunteer section */
+
+/* Volunteer section */
+.volunteer{
+    width: 60%;
+    margin: 3rem auto;
+}
+
+.volunteer__name{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.volunteer__email{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.volunteer__what-they-will-do{
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.volunteer-control-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    color: var(--color-heavy-white);
+    margin-top: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.volunteer-control-btn-accept{
+    background-color: var(--color-primary-dark);
+}
+
+.volunteer-control-btn-reject{
+    background-color: crimson;
+}
+/* End of the volunteer section */

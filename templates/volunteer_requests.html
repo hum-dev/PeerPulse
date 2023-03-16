@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block pagecontent %}
+<h3>You will see all volunteers here</h3>
+
+<secton class="volunteers-section">
+    {% for volunteer in all_volunteers%}
+    <div class="volunteer">
+        <h3 class="volunteer__name">{{volunteer.first_name}} {{volunteer.last_name}}</h3>
+        <h4 class="volunteer__email">{{volunteer.email_address}}</h4>
+        <p class="volunteer__what-they-will-do">{{volunteer.what_they_will_do}}</p>
+        <div class="volunteer-control">
+            <a href="" class="volunteer-control-btn volunteer-control-btn-accept">accept</a>
+            <a href="" class="volunteer-control-btn volunteer-control-btn-reject">reject</a>
+        </div>
+    </div>
+    {% endfor %}
+</secton>
+{% endblock pagecontent%}

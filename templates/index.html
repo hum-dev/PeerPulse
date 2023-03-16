@@ -19,7 +19,7 @@
 </section>
 
 <!-- what we help you with section -->
-<section class="wwhyw-section">
+<section class="wwhyw-section" id="how-we-help">
     <div class="title-box">
         <h3 class="title-box__titlesub">what we help you with (and more)</h3>
         <h2 class="title-box__titlemain">Your first step to happiness is when you say the issues that press you</h2>
@@ -96,7 +96,7 @@
 <!-- end of what we help you with section -->
 
 <!-- volunteers section -->
-<section class="volunteer-section">
+<section class="volunteer-section" id="lend-a-hand">
     <div class="title-box">
         <h3 class="title-box__titlesub">are you willing to help??</h3>
         <h2 class="title-box__titlemain">The greatest gift is a portion of thyself. A helping hand is worth more than a thousand words.</h2>
@@ -113,13 +113,13 @@
         <p class="volunteer-section__textbox--text">
             To get started, simply click the get started link below and fill in the details in the form that appears, once you are done submit the form and we will getting back to you shortly.
         </p>
-        <a href="" class="btn volunteer-section__textbox--btn">get started helping others</a>
+        <a href="{{ url_for('register_as_volunteer') }}" class="btn volunteer-section__textbox--btn">get started helping others</a>
     </div>
 </section>
 <!-- end of volunteers section -->
 
 <!-- upcoming events section -->
-<section class="upcoming-events">
+<section class="upcoming-events" id="upcoming-events">
     <div class="title-box">
         <h3 class="title-box__titlesub">upcoming events</h3>
         <h2 class="title-box__titlemain">we have a number of events coming up in the near future</h2>
@@ -189,7 +189,7 @@
 <!-- end of upcoming events section -->
 
 <!-- team section -->
-<section class="team-section">
+<section class="team-section" id="team">
     <div class="title-box">
         <h3 class="title-box__titlesub">meet the team</h3>
         <h2 class="title-box__titlemain">people working hard to make this program a success</h2>
@@ -228,6 +228,28 @@
                         <use xlink:href="static/images/sprite.svg#icon-gmail"></use>
                     </svg>
                     <span>julimwad@gmail.com</span>
+                </p>
+                <p class="team__member__detail">
+                    <svg>
+                        <use xlink:href="static/images/sprite.svg#icon-phone"></use>
+                    </svg>
+                    <span>+254716240703</span>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="team__member">
+            <div class="team__member__image-container">
+                <img src="{{url_for('static', filename='images/team-1.jpg')}}" alt="murimi">
+            </div>
+            <div class="team__member--about">
+                <p class="team__member--title">K.Murimi (Peer Mentor)</p>
+                <p class="team__member__detail">
+                    <svg>
+                        <use xlink:href="static/images/sprite.svg#icon-gmail"></use>
+                    </svg>
+                    <span>kmurimi996@gmail.com</span>
                 </p>
                 <p class="team__member__detail">
                     <svg>

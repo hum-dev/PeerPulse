@@ -7,7 +7,7 @@ from datetime import datetime
 from uuid import uuid4
 from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from forms import SpeakOutForm, AdminSignUp, LoginForm
+from forms import SpeakOutForm, AdminSignUp, LoginForm, HelpOthersForm
 from flask_login import LoginManager,UserMixin
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -17,7 +17,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///peer_pulse.db"
 
 db = SQLAlchemy(app=app)
 login_manager = LoginManager(app)
-# login_manager.login_view = 'login_admin'
+login_manager.login_view = 'login_admin'
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -47,13 +47,24 @@ class HelpSeeker(db.Model):
 
 class Admins(db.Model, UserMixin):
     """
-    Table for those seeking help
+    Table for administrators
     """
     __tablename__ = "administrators"
     id = db.Column(db.Integer, primary_key=True)
     prefered_username = db.Column(db.String, nullable=False)
     email_address = db.Column(db.String, nullable=False)
     password = db.Column(db.String, nullable=False)
+
+class Volunteers(db.Model):
+    """
+    Table holding those who are requesting to be volunteers
+    """
+    __tablename__ = "volunteers"
+    id = db.Column(db.Integer, primary_key=True)
+    email_address = db.Column(db.String, nullable=False)
+    first_name = db.Column(db.String, nullable=False)
+    last_name = db.Column(db.String, nullable=False)
+    what_they_will_do = db.Column(db.String, nullable=False)
 
 @app.route('/home', methods=["GET", "POST"])
 @app.route('/', methods=["GET", "POST"])
@@ -106,6 +117,22 @@ def create_admin():
         db.session.commit()
         return redirect(url_for('home'))
     return render_template('create_admin.html', title="PeerPulse - Create and admin", form=form), 200
+
+@app.route('/register-as-volunteer', methods=["GET", "POST"])
+def register_as_volunteer():
+    form = HelpOthersForm()
+    if form.validate_on_submit():
+        volunteer_to_register = Volunteers(email_address=form.email_address.data, first_name=form.first_name.data, last_name=form.last_name.data, what_they_will_do=form.what_they_will_do.data)
+        db.session.add(volunteer_to_register)
+        db.session.commit()
+        return redirect(url_for('home'))
+    return render_template('volunteer.html', title="PeerPulse - become a volunteer", form=form), 200
+
+@app.route('/volunteer-requests', methods=["GET", "POST"])
+# @login_required
+def volunteer_requests():
+    all_volunteers = Volunteers.query.all()
+    return render_template('volunteer_requests.html', all_volunteers=all_volunteers, title="PeerPulse - volunteer requests")
 
 if __name__ == "__main__":
     app.run(debug=True)
